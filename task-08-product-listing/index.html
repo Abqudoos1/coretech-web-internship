@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Qudoos | Product E-Commerce Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <header class="dashboard-header">
+            <h2>E-Commerce Inventory Engine</h2>
+            <p class="subtitle">Multi-Layer Filtering, Category Mapping & Sorting Systems</p>
+        </header>
+
+        <section class="controls-panel">
+            <div class="control-group">
+                <input type="text" id="productSearch" placeholder="Search product catalogs...">
+            </div>
+
+            <div class="control-group">
+                <select id="categoryFilter">
+                    <option value="all">All Product Categories</option>
+                    <option value="electronics">Electronics Tech</option>
+                    <option value="apparel">Apparel & Wearables</option>
+                    <option value="accessories">Office & Accessories</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <select id="priceSort">
+                    <option value="default">Sort by: Relevance</option>
+                    <option value="lowToHigh">Price: Low to High</option>
+                    <option value="highToLow">Price: High to Low</option>
+                </select>
+            </div>
+        </section>
+
+        <div class="inventory-status" id="inventoryStatus">Showing 8 item structures</div>
+
+        <main class="product-grid" id="productGrid">
+            </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
