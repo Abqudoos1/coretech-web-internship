@@ -1,0 +1,93 @@
+/* --- Core Initializer Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+/* --- Layout Utility Classes --- */
+.section-padding { padding: 90px 20px; max-width: 1200px; margin: 0 auto; }
+.alternate-bg { background-color: #f8fafc; max-width: 100% !important; padding: 90px max(20px, calc((100% - 1200px)/2)); }
+.section-title { text-align: center; margin-bottom: 50px; }
+.sub-tag { font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 6px; }
+h2 { font-size: 2.2rem; font-weight: 800; color: #0f172a; }
+
+/* --- Complex Responsive Grid Controllers --- */
+.grid-layout { display: grid; gap: 30px; }
+.three-col { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.four-col { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.two-col { grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); }
+
+@media (max-width: 768px) {
+    .two-col { grid-template-columns: 1fr; }
+}
+
+/* --- Sticky Modern Navigation Header --- */
+.app-header { background-color: #0f172a; padding: 22px 0; position: sticky; top: 0; z-index: 5000; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+.brand-logo { color: #ffffff; font-size: 1.5rem; font-weight: 800; }
+.brand-logo span { color: #10b981; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: #ffffff; }
+
+/* --- Hero Frame --- */
+.hero-section {
+    background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95)), url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=1200') no-repeat center center/cover;
+    height: 80vh; display: flex; justify-content: center; align-items: center; color: #ffffff; text-align: center; padding: 0 20px;
+}
+.hero-overlay h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.15; }
+.accent-text { color: #10b981; }
+.hero-overlay p { font-size: 1.25rem; color: #cbd5e1; max-width: 700px; margin: 20px auto 40px auto; }
+.cta-pulse-btn { display: inline-block; background-color: #10b981; color: #ffffff; padding: 15px 38px; text-decoration: none; border-radius: 6px; font-weight: 600; transition: all 0.2s; }
+.cta-pulse-btn:hover { background-color: #059669; transform: translateY(-2px); }
+
+/* --- Structural UI Component Blocks --- */
+.service-node, .matrix-tile, .showcase-card {
+    background: #ffffff; border: 1px solid #e2e8f0; padding: 35px; border-radius: 10px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.25s;
+}
+.service-node:hover, .matrix-tile:hover { border-color: #10b981; transform: translateY(-4px); }
+.service-node h3 { color: #0f172a; margin-bottom: 12px; }
+.service-node p, .matrix-tile p { color: #64748b; font-size: 0.9rem; }
+
+.matrix-tile strong { color: #0f172a; display: block; font-size: 1.1rem; margin-bottom: 5px; }
+.showcase-card { background-color: #0f172a; color: #ffffff; border: none; }
+.showcase-card h4 { color: #10b981; font-size: 1.2rem; margin-bottom: 10px; }
+.showcase-card p { color: #94a3b8; font-size: 0.9rem; }
+
+/* --- Contact Hub & Validation Interface --- */
+.contact-box-wrapper { max-width: 600px; margin: 0 auto; background: #ffffff; border: 1px solid #e2e8f0; padding: 45px; border-radius: 12px; }
+.control-wrapper { margin-bottom: 20px; text-align: left; }
+.control-wrapper label { display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 6px; }
+.control-wrapper input, .control-wrapper textarea { width: 100%; padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 6px; outline: none; font-size: 0.95rem; }
+.control-wrapper input:focus, .control-wrapper textarea:focus { border-color: #10b981; }
+.control-wrapper input.invalid, .control-wrapper textarea.invalid { border-color: #ef4444; background-color: #fef2f2; }
+.runtime-error { color: #ef4444; font-size: 0.8rem; display: block; margin-top: 5px; min-height: 16px; }
+
+.submit-vector-btn { width: 100%; background: #0f172a; color: #ffffff; padding: 15px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+.submit-vector-btn:hover { background: #1e293b; }
+.success-banner { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 14px; border-radius: 6px; text-align: center; margin-bottom: 25px; font-size: 0.9rem; font-weight: 500; }
+
+/* --- Footer Infrastructure --- */
+.app-footer { background-color: #0f172a; color: #64748b; text-align: center; padding: 35px 20px; font-size: 0.85rem; border-top: 1px solid #1e293b; }
+
+/* --- Tablet/Mobile Adaptive Interception --- */
+@media (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 15px; }
+    .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .hero-overlay h1 { font-size: 2.3rem; }
+    .section-padding { padding: 55px 20px; }
+    .contact-box-wrapper { padding: 25px; }
+}
+.hidden { display: none; }
