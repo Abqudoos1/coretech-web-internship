@@ -1,0 +1,129 @@
+/* --- Global Overrides & Themes --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 30px 20px;
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.main-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main-header h2 { color: #0f172a; font-size: 1.8rem; }
+.subtitle { color: #64748b; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 5px; }
+
+/* --- Dashboard Grid Framework --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Form Architecture Layout --- */
+.form-panel {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid #0f172a;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.form-panel h3 { color: #0f172a; margin-bottom: 20px; font-size: 1.2rem; }
+.form-group { margin-bottom: 15px; }
+label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px; color: #475569; }
+
+input, select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+input:focus, select:focus { border-color: #10b981; }
+
+/* --- Action Buttons --- */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+.btn-primary { background-color: #0f172a; color: #ffffff; }
+.btn-primary:hover { background-color: #1e293b; }
+.btn-secondary { background-color: #e2e8f0; color: #334155; }
+
+/* --- Data Presentation Layer --- */
+.data-panel {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.filter-bar input { flex: 2; }
+.filter-bar select { flex: 1; }
+
+/* --- Tabular Matrix Rendering --- */
+.table-responsive { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
+th, td { padding: 14px 16px; border-bottom: 1px solid #e2e8f0; }
+th { background-color: #f8fafc; color: #475569; font-weight: 600; }
+
+/* Status Badges */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.badge.Pending { background: #fef3c7; color: #d97706; }
+.badge.In-Progress { background: #dbeafe; color: #2563eb; }
+.badge.Completed { background: #d1fae5; color: #059669; }
+
+/* Table Action Buttons */
+.action-btn {
+    width: auto;
+    margin: 0 4px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+}
+.edit-btn { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+.edit-btn:hover { background: #2563eb; color: #fff; }
+.del-btn { background: #fef2f2; color: #dc2626; border: 1px solid #fca5a5; }
+.del-btn:hover { background: #dc2626; color: #fff; }
+
+.hidden { display: none; }
